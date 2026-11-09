@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+
+  <title>Projects</title>
+  <meta name="description" content="Projects curriculum by hocbigg.">
+  <meta name="author" content="hocbigg">
+
+  <link rel="canonical" href="https://hocbigg.github.io/theatre-and-drama-studies/projects.html">
+  <meta property="og:title" content="Projects">
+  <meta property="og:description" content="Projects curriculum by hocbigg.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hocbigg.github.io/theatre-and-drama-studies/projects.html">
+  <link rel="icon" href="https://hocbigg.github.io/images/favicon.ico">
+
+  <style>
+:root {
+  color-scheme: light dark;
+
+  --bg: #ffffff;
+  --fg: #1a1a1a;
+  --muted: #595959;
+  --border: #e0e0e0;
+  --th-bg: #f6f8fa;
+  --code-bg: #f4f4f4;
+  --link: #0969da;
+  --focus-ring: #0969da;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0d1117;
+    --fg: #e6edf3;
+    --muted: #8b949e;
+    --border: #30363d;
+    --th-bg: #161b22;
+    --code-bg: #161b22;
+    --link: #58a6ff;
+    --focus-ring: #58a6ff;
+  }
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 1.5rem auto;
+  max-width: 60rem;
+  padding: 0 1rem 3.5rem;
+  background-color: var(--bg);
+  color: var(--fg);
+  font: 1.15rem/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  
+  /* Cú pháp hiện đại thay thế cho word-wrap */
+  overflow-wrap: break-word;
+}
+
+.site-header {
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1rem;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 0.5rem 1.25rem;
+  font-size: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+nav a:hover, 
+nav a:focus-visible {
+  color: var(--fg);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+nav .nav-brand {
+  color: var(--fg);
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+
+.skip-link {
+  position: absolute;
+  transform: translateY(-150%);
+  left: 1rem;
+  background: var(--fg);
+  color: var(--bg);
+  padding: 0.5rem 1rem;
+  z-index: 100;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(1rem);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.3;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--fg);
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 2rem;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--border);
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1.15rem;
+}
+
+h6 {
+  font-size: 1rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+p, ul, ol, blockquote, table {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+li > ul,
+li > ol {
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+}
+
+li {
+  margin-bottom: 0.25rem;
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+a:has(img) {
+  text-decoration: none;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.page-header .page-subtitle {
+  color: var(--muted);
+  font-size: 1.15rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.page-header img {
+  margin: 0 auto 1rem;
+  display: block;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.875em;
+  background-color: var(--code-bg);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+pre {
+  background-color: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem;
+  overflow-x: auto;
+  tab-size: 2;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+  border: none;
+  font-size: 0.9rem;
+  border-radius: 0;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th, td {
+  border: 1px solid var(--border);
+  padding: 0.6rem 0.75rem;
+  vertical-align: top;
+}
+
+th {
+  background-color: var(--th-bg);
+  font-weight: 600;
+}
+
+blockquote {
+  margin-inline: 0;
+  border-left: 4px solid var(--border);
+  padding-left: 1rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  body {
+    max-width: none;
+    color: #000;
+    background: #fff;
+  }
+  .skip-link, nav {
+    display: none;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <nav aria-label="Main Navigation">
+    <ul>
+      <li><a href="https://hocbigg.github.io/" class="nav-brand">Hocbigg</a></li>
+      <li><a href="/theatre-and-drama-studies/">Theatre And Drama Studies</a></li>
+      <li><a href="/theatre-and-drama-studies/advanced_topics.html">Advanced Topics</a></li>
+      <li><a href="/theatre-and-drama-studies/projects.html">Projects</a></li>
+      <li><a href="https://github.com/hocbigg/theatre-and-drama-studies" target="_blank" rel="noopener noreferrer">GitHub<span class="sr-only"> (opens in new tab)</span></a></li>
+    </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <article>
+
+<h1 id="projects">Projects</h1>
+<blockquote>
+<p>"What I cannot create, I do not understand." — Richard Feynman</p>
+</blockquote>
+<ul>
+<li><a href="#stage-your-own-staged-readings">Staged Readings</a></li>
+<li><a href="#write-your-own-ten-minute-plays">Ten-Minute Plays</a></li>
+<li><a href="#devise-your-own-original-performances">Devised Performances</a></li>
+<li><a href="#produce-your-own-audio-dramas">Audio Dramas</a></li>
+<li><a href="#compile-your-own-dramaturgical-casebooks">Dramaturgical Casebooks</a></li>
+<li><a href="#direct-your-own-short-scenes">Short Scenes</a></li>
+<li><a href="#write-your-own-theatre-reviews">Theatre Reviews</a></li>
+<li><a href="#build-your-own-stage-design-portfolios">Stage Design Portfolios</a></li>
+<li><a href="#build-your-own-puppets">Puppets</a></li>
+<li><a href="#conduct-your-own-theatre-oral-histories">Theatre Oral Histories</a></li>
+<li><a href="#adapt-your-own-stage-scripts">Stage Adaptations</a></li>
+</ul>
+<h2 id="stage-your-own-staged-readings">Stage your own staged readings</h2>
+<ul>
+<li><a href="https://samgraber.com/2013/04/30/staged-reading-dos-and-donts" target="_blank" rel="noopener noreferrer">Staged Reading Do's and Don'ts (Sam Graber)</a></li>
+<li><a href="https://www.musicalwriters.com/development/how-i-self-produced-a-quality-staged-reading-on-the-cheap/" target="_blank" rel="noopener noreferrer">How I Self-Produced an Inexpensive Staged Reading (Brent Monahan / MusicalWriters)</a></li>
+<li><a href="https://www.backstage.com/magazine/article/staged-readings-guide-74967/" target="_blank" rel="noopener noreferrer">Staged Readings: A Guide (Backstage)</a></li>
+<li><a href="https://www.playwrightsrealm.org/aspiring-playwrights-articles/read-this-before-you-have-a-reading" target="_blank" rel="noopener noreferrer">Read This Before You Have a Reading (The Playwrights Realm)</a></li>
+</ul>
+<h2 id="write-your-own-ten-minute-plays">Write your own ten-minute plays</h2>
+<ul>
+<li><a href="https://www.audreycefaly.com/how-to-write-the-ten-minute-play" target="_blank" rel="noopener noreferrer">How to Write the Ten-Minute Play (Audrey Cefaly)</a></li>
+<li><a href="https://www.kennedy-center.org/education/opportunities-for-artists/competitions--commissions/vsa-playwright-discovery/" target="_blank" rel="noopener noreferrer">Access/VSA Playwright Discovery: What is a Ten-Minute Script? (The Kennedy Center)</a></li>
+<li><a href="https://books.google.com/books?isbn=9781585107025" target="_blank" rel="noopener noreferrer">A More Perfect Ten: Writing and Producing the Ten-Minute Play (Gary Garrison)</a> [Paid]</li>
+<li><a href="https://www.playwrightsrealm.org/aspiring-playwrights-articles" target="_blank" rel="noopener noreferrer">Aspiring Playwrights Articles Hub (The Playwrights Realm)</a></li>
+</ul>
+<h2 id="devise-your-own-original-performances">Devise your own original performances</h2>
+<ul>
+<li><a href="https://pwcenter.org/writing-without-a-script-a-step-by-step-guide-to-devising/" target="_blank" rel="noopener noreferrer">Writing Without a Script: A Step-by-Step Guide to Devising (Kristin Idaszak / Playwrights' Center)</a></li>
+<li><a href="https://www.nationaltheatre.org.uk/learn-explore/digital-learning-resources/devising-masterclass-with-rashdash/" target="_blank" rel="noopener noreferrer">Devising Masterclass with RashDash (National Theatre)</a></li>
+<li><a href="https://books.google.com/books?isbn=9781101971772" target="_blank" rel="noopener noreferrer">Moment Work: Tectonic Theater Project's Process of Devising Theater (Moisés Kaufman &amp; Barbara Pitts McAdams)</a> [Paid]</li>
+</ul>
+<h2 id="produce-your-own-audio-dramas">Produce your own audio dramas</h2>
+<ul>
+<li><a href="https://www.playwrightsrealm.org/aspiring-playwrights-articles/approaching-audio-drama-as-a-playwright" target="_blank" rel="noopener noreferrer">Approaching Audio Drama as a Playwright (Andrew Siañez-De La O / The Playwrights Realm)</a></li>
+<li><a href="https://downloads.bbc.co.uk/writersroom/scripts/bbcradioscene.pdf" target="_blank" rel="noopener noreferrer">BBC Radio Drama Scene Style Guide and Script Format (BBC Writersroom)</a></li>
+<li><a href="https://www.thepodcasthost.com/editing-production/producing-editing-an-audio-drama-podcast/" target="_blank" rel="noopener noreferrer">How Do You Edit and Produce an Audio Drama Podcast? (Matthew McLean / The Podcast Host)</a></li>
+</ul>
+<h2 id="compile-your-own-dramaturgical-casebooks">Compile your own dramaturgical casebooks</h2>
+<ul>
+<li><a href="https://sites.google.com/view/dramaturgytoolkits/dramaturgy-artifacts/research-packets" target="_blank" rel="noopener noreferrer">Research Packets and Dramaturgical Casebook Guide (Dramaturgy Toolkits)</a></li>
+<li><a href="https://files.blogs.baruch.cuny.edu/thr3010/files/2012/09/Dramaturgy-Packet-Assignment.pdf" target="_blank" rel="noopener noreferrer">Dramaturgy Packet Assignment and Rubric (Baruch College, CUNY)</a></li>
+</ul>
+<h2 id="direct-your-own-short-scenes">Direct your own short scenes</h2>
+<ul>
+<li><a href="https://www.stagemilk.com/how-to-direct/" target="_blank" rel="noopener noreferrer">How to Direct: An Actor's Guide to Directing (StageMilk)</a></li>
+<li><a href="https://www.stagemilk.com/how-to-direct-a-play/" target="_blank" rel="noopener noreferrer">A Guide to Directing Your First Play (StageMilk)</a></li>
+<li><a href="https://kerryhishon.com/2014/09/23/advice-for-first-time-directors/" target="_blank" rel="noopener noreferrer">Advice for First-Time Directors (Kerry Hishon)</a></li>
+</ul>
+<h2 id="write-your-own-theatre-reviews">Write your own theatre reviews</h2>
+<ul>
+<li><a href="https://www.theatrefolk.com/blog/write-play-review" target="_blank" rel="noopener noreferrer">How to Write a Play Review (Theatrefolk)</a></li>
+<li><a href="https://www.arts-emergency.org/noticeboard/writing-great-reviews-theatre" target="_blank" rel="noopener noreferrer">Writing Great Reviews: Theatre (Bryony Taylor / Arts Emergency)</a></li>
+</ul>
+<h2 id="build-your-own-stage-design-portfolios">Build your own stage design portfolios</h2>
+<ul>
+<li><a href="https://getintotheatre.org/blog/how-to-make-a-set-design-portfolio" target="_blank" rel="noopener noreferrer">How to Make a Set Design Portfolio (Get Into Theatre)</a></li>
+<li><a href="https://getintotheatre.org/blog/how-to-make-a-costume-design-portfolio-in-theatre" target="_blank" rel="noopener noreferrer">How to Make a Costume Design Portfolio in Theatre (Get Into Theatre)</a></li>
+<li><a href="https://theatre.artsandsciences.baylor.edu/resources/portfolio-helpful-hints" target="_blank" rel="noopener noreferrer">Helpful Hints for Design/Technology Portfolios (Baylor University Theatre Arts)</a></li>
+<li><a href="https://www.screenskills.com/starting-your-career/building-your-portfolio/build-your-costume-portfolio" target="_blank" rel="noopener noreferrer">Build Your Costume Portfolio (ScreenSkills)</a></li>
+<li><a href="https://www.belgrade.co.uk/stories/weducation-creating-a-set-model-box/" target="_blank" rel="noopener noreferrer">WEDUCATION: Creating a Set Model Box (Belgrade Theatre)</a></li>
+</ul>
+<h2 id="build-your-own-puppets">Build your own puppets</h2>
+<ul>
+<li><a href="https://www.instructables.com/How-to-Build-a-Quality-Puppet/" target="_blank" rel="noopener noreferrer">How to Build a Quality Puppet: 11 Steps (Instructables)</a></li>
+<li><a href="https://www.youtube.com/watch?v=FRp-ja0i0ww" target="_blank" rel="noopener noreferrer">How to Make a Muppet from Scratch (Puppet Nerd / YouTube)</a></li>
+<li><a href="https://www.youtube.com/watch?v=Ym13GbygiSM" target="_blank" rel="noopener noreferrer">How to Make a Sock Puppet, No Sewing (Woodfish Toys / YouTube)</a></li>
+</ul>
+<h2 id="conduct-your-own-theatre-oral-histories">Conduct your own theatre oral histories</h2>
+<ul>
+<li><a href="https://folklife.si.edu/the-smithsonian-folklife-and-oral-history-interviewing-guide/smithsonian" target="_blank" rel="noopener noreferrer">The Smithsonian Folklife and Oral History Interviewing Guide (Smithsonian Center for Folklife and Cultural Heritage)</a></li>
+<li><a href="https://oralhistory.org/best-practices/" target="_blank" rel="noopener noreferrer">OHA Principles and Best Practices for Oral History (Oral History Association)</a></li>
+</ul>
+<h2 id="adapt-your-own-stage-scripts">Adapt your own stage scripts</h2>
+<ul>
+<li><a href="https://pentoprint.org/write-on-features-adapting-books-for-stage/" target="_blank" rel="noopener noreferrer">Write On! Features: Adapting Books For The Stage (Lucy Kaufman / Pen to Print)</a></li>
+<li><a href="https://www.belgrade.co.uk/stories/weducation-adapting-a-novel-for-the-stage/" target="_blank" rel="noopener noreferrer">WEDUCATION: Adapting a Novel for the Stage (Belgrade Theatre)</a></li>
+</ul>
+    </article>
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+
+  <title>Advanced Topics in Theatre and Drama Studies</title>
+  <meta name="description" content="Advanced Topics in Theatre and Drama Studies curriculum by hocbigg.">
+  <meta name="author" content="hocbigg">
+
+  <link rel="canonical" href="https://hocbigg.github.io/theatre-and-drama-studies/advanced_topics.html">
+  <meta property="og:title" content="Advanced Topics in Theatre and Drama Studies">
+  <meta property="og:description" content="Advanced Topics in Theatre and Drama Studies curriculum by hocbigg.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hocbigg.github.io/theatre-and-drama-studies/advanced_topics.html">
+  <link rel="icon" href="https://hocbigg.github.io/images/favicon.ico">
+
+  <style>
+:root {
+  color-scheme: light dark;
+
+  --bg: #ffffff;
+  --fg: #1a1a1a;
+  --muted: #595959;
+  --border: #e0e0e0;
+  --th-bg: #f6f8fa;
+  --code-bg: #f4f4f4;
+  --link: #0969da;
+  --focus-ring: #0969da;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0d1117;
+    --fg: #e6edf3;
+    --muted: #8b949e;
+    --border: #30363d;
+    --th-bg: #161b22;
+    --code-bg: #161b22;
+    --link: #58a6ff;
+    --focus-ring: #58a6ff;
+  }
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 1.5rem auto;
+  max-width: 60rem;
+  padding: 0 1rem 3.5rem;
+  background-color: var(--bg);
+  color: var(--fg);
+  font: 1.15rem/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  
+  /* Cú pháp hiện đại thay thế cho word-wrap */
+  overflow-wrap: break-word;
+}
+
+.site-header {
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1rem;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 0.5rem 1.25rem;
+  font-size: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+nav a:hover, 
+nav a:focus-visible {
+  color: var(--fg);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+nav .nav-brand {
+  color: var(--fg);
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+
+.skip-link {
+  position: absolute;
+  transform: translateY(-150%);
+  left: 1rem;
+  background: var(--fg);
+  color: var(--bg);
+  padding: 0.5rem 1rem;
+  z-index: 100;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(1rem);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.3;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--fg);
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 2rem;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--border);
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1.15rem;
+}
+
+h6 {
+  font-size: 1rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+p, ul, ol, blockquote, table {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+li > ul,
+li > ol {
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+}
+
+li {
+  margin-bottom: 0.25rem;
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+a:has(img) {
+  text-decoration: none;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.page-header .page-subtitle {
+  color: var(--muted);
+  font-size: 1.15rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.page-header img {
+  margin: 0 auto 1rem;
+  display: block;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.875em;
+  background-color: var(--code-bg);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+pre {
+  background-color: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem;
+  overflow-x: auto;
+  tab-size: 2;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+  border: none;
+  font-size: 0.9rem;
+  border-radius: 0;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th, td {
+  border: 1px solid var(--border);
+  padding: 0.6rem 0.75rem;
+  vertical-align: top;
+}
+
+th {
+  background-color: var(--th-bg);
+  font-weight: 600;
+}
+
+blockquote {
+  margin-inline: 0;
+  border-left: 4px solid var(--border);
+  padding-left: 1rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  body {
+    max-width: none;
+    color: #000;
+    background: #fff;
+  }
+  .skip-link, nav {
+    display: none;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <nav aria-label="Main Navigation">
+    <ul>
+      <li><a href="https://hocbigg.github.io/" class="nav-brand">Hocbigg</a></li>
+      <li><a href="/theatre-and-drama-studies/">Theatre And Drama Studies</a></li>
+      <li><a href="/theatre-and-drama-studies/advanced_topics.html">Advanced Topics</a></li>
+      <li><a href="/theatre-and-drama-studies/projects.html">Projects</a></li>
+      <li><a href="https://github.com/hocbigg/theatre-and-drama-studies" target="_blank" rel="noopener noreferrer">GitHub<span class="sr-only"> (opens in new tab)</span></a></li>
+    </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <article>
+
+<h1 id="advanced-topics-in-theatre-and-drama-studies">Advanced Topics in Theatre and Drama Studies</h1>
+<p>Learners completing advanced work in Theatre and Drama Studies should select one or two specialization tracks aligned with their artistic or scholarly goals, rather than attempting to complete all tracks.</p>
+<ul>
+<li><strong>Advanced Acting Methodologies &amp; Physical Theatre</strong> - Post-Stanislavskian performance systems, somatic voice production, physical theatre, and ensemble movement architectures.</li>
+<li><strong>Directing and Dramaturgy</strong> - Advanced staging craft, structural and contextual production dramaturgy, and contemporary directorial leadership.</li>
+<li><strong>Playwriting and Dramatic Writing</strong> - Dramatic structure, scene mechanics, dialogue rhythm, and the workshop development of original full-length plays.</li>
+<li><strong>Theatre Theory and Performance Studies</strong> - Critical theory, postdramatic aesthetics, Brechtian dialectics, and global theatrical exchange.</li>
+<li><strong>Applied and Politically Engaged Theatre</strong> - Participatory theatre, community intervention, verbatim practices, and accessible performance design.</li>
+</ul>
+<h2 id="advanced-acting-methodologies-physical-theatre">Advanced Acting Methodologies &amp; Physical Theatre</h2>
+<p>(Advanced study of twentieth- and twenty-first-century acting lineages, physical theatre systems, and vocal liberation that follow foundational psychological realism.)</p>
+<p>Psychological Gesture and Imagination: <a href="https://archive.org/details/toactorontechniq00chek" target="_blank" rel="noopener noreferrer">To the Actor: On the Technique of Acting (Michael Chekhov / Internet Archive)</a> - Introduces the psychological gesture, atmospheres, and psycho-physical exercises that free actors from literalism.</p>
+<p>Truthful Action and Repetition: <a href="https://books.google.com/books?isbn=9780394750590" target="_blank" rel="noopener noreferrer">Sanford Meisner on Acting (Sanford Meisner &amp; Dennis Longwell)</a> - A transcription of Meisner's two-year conservatory syllabus detailing the repetition exercise, emotional preparation, and instinctive listening.</p>
+<p>Physical and Poor Theatre: <a href="https://archive.org/details/towardsapoorthea0000grot" target="_blank" rel="noopener noreferrer">Towards a Poor Theatre (Jerzy Grotowski / Internet Archive)</a> - Details Grotowski's rigorous physical training, the elimination of scenic excess, and the actor's psycho-physical sacrifice in the holy theatre.</p>
+<p>Spatial and Temporal Ensemble: <a href="https://books.google.com/books?isbn=9781559362412" target="_blank" rel="noopener noreferrer">The Viewpoints Book: A Practical Guide to Viewpoints and Composition (Anne Bogart &amp; Tina Landau)</a> - Establishes a shared improvisational vocabulary of time and space to train ensemble movement and spontaneous physical staging.</p>
+<p>Vocal Freedom and Classical Text: <a href="https://books.google.com/books?isbn=9780020415558" target="_blank" rel="noopener noreferrer">Voice and the Actor (Cicely Berry)</a> - The foundational Royal Shakespeare Company vocal curriculum linking breath support, muscularity, and emotional release directly to complex text.</p>
+<h2 id="directing-and-dramaturgy">Directing and Dramaturgy</h2>
+<p>(Advanced directorial vision, spatial composition, and the analytical practices of production and development dramaturgy.)</p>
+<p>Directorial Anatomy and Rehearsal Process: <a href="https://archive.org/details/ondirecting0000clur" target="_blank" rel="noopener noreferrer">On Directing (Harold Clurman / Internet Archive)</a> - Group Theatre co-founder Harold Clurman lays out a complete directorial workflow from script analysis and spine formulation to tech rehearsals.</p>
+<p>Spatial Aesthetics and Theatrical Form: <a href="https://archive.org/details/emptyspace00broo" target="_blank" rel="noopener noreferrer">The Empty Space (Peter Brook / Internet Archive)</a> - Categorizes modern theatre into deadly, holy, rough, and immediate forms, providing a critical framework for staging vitality.</p>
+<p>Production Dramaturgy and Collaboration: <a href="https://books.google.com/books?isbn=9781408155653" target="_blank" rel="noopener noreferrer">Dramaturgy in the Making: A User's Guide for Theatre Practitioners (Katalin Trencsényi)</a> - A practical mapping of modern dramaturgy across new work development, production support, and contemporary performance ensembles.</p>
+<p>Composition and Directorial Obstacles: <a href="https://archive.org/details/directorprepares0000boga" target="_blank" rel="noopener noreferrer">A Director Prepares: Seven Essays on Art and Theatre (Anne Bogart / Internet Archive)</a> - Examines the psychological, compositional, and philosophical problems directors encounter when structuring rehearsals and generating stage presence.</p>
+<h2 id="playwriting-and-dramatic-writing">Playwriting and Dramatic Writing</h2>
+<p>(The craft and mechanics of dramatic writing, from premise formulation and character conflict to scene economy and structured script workshops.)</p>
+<p>Dramatic Writing Foundations: <a href="https://ocw.mit.edu/courses/21m-604-playwriting-i-spring-2005/" target="_blank" rel="noopener noreferrer">Playwriting I - 21M.604 (MIT OpenCourseWare)</a> - A complete university-level studio course providing structured writing prompts, scene exercises, and character-building assignments.</p>
+<p>Character-Driven Conflict and Premise: <a href="https://archive.org/details/artofdramaticwri0000lajo" target="_blank" rel="noopener noreferrer">The Art of Dramatic Writing (Lajos Egri / Internet Archive)</a> - Establishes the dialectical premise as the foundational engine of dramatic conflict, character orchestration, and inevitable climax.</p>
+<p>Scene Construction and Dramatic Economy: <a href="https://books.google.com/books?isbn=9780435086299" target="_blank" rel="noopener noreferrer">The Dramatist's Toolkit: The Craft of the Working Playwright (Jeffrey Sweet)</a> - A practical handbook focusing on negotiations of power between characters, subtextual exposition, and the structural beat.</p>
+<p>Advanced Playwrights' Workshop: <a href="https://ocw.mit.edu/courses/21m-785-playwrights-workshop-spring-2012/" target="_blank" rel="noopener noreferrer">Playwrights' Workshop - 21M.785 (MIT OpenCourseWare)</a> - Guides writers through the revision, dramaturgy, and reading phases required to bring a multi-scene or full-length play to workshop production.</p>
+<h2 id="theatre-theory-and-performance-studies">Theatre Theory and Performance Studies</h2>
+<p>(Advanced intellectual paradigms examining performance beyond the dramatic text, cross-cultural theatrical historiography, and political aesthetics.)</p>
+<p>Foundations of Performance Theory: <a href="https://www.coursera.org/learn/richard-schechners-introduction-to-performance-studies" target="_blank" rel="noopener noreferrer">Richard Schechner's Introduction to Performance Studies (NYU / Coursera)</a> - A free university course designed by the founder of Performance Studies covering ritual, play, everyday performance, and social drama.</p>
+<p>Postdramatic Theatre and Deconstruction: <a href="https://books.google.com/books?isbn=9780415268134" target="_blank" rel="noopener noreferrer">Postdramatic Theatre (Hans-Thies Lehmann)</a> - The definitive theoretical study analyzing modern theatrical aesthetics that abandon traditional dramatic plot, character, and text hierarchies.</p>
+<p>Epic Theatre and Dialectics: <a href="https://books.google.com/books?isbn=9780809005420" target="_blank" rel="noopener noreferrer">Brecht on Theatre: The Development of an Aesthetic (Bertolt Brecht, ed. John Willett)</a> - Brecht's collected theoretical writings detailing the alienation effect (Verfremdungseffekt), Gestus, and theatre as an instrument for social critique.</p>
+<p>Global Theatre Historiography: <a href="https://www.coursera.org/learn/global-theatre" target="_blank" rel="noopener noreferrer">Theatre and Globalization (LMU Munich / Coursera)</a> - An open university course investigating the historical and modern circulation of theatrical forms, colonial encounters, and international festivals.</p>
+<h2 id="applied-and-politically-engaged-theatre">Applied and Politically Engaged Theatre</h2>
+<p>(The application of theatrical techniques to community dialogue, social justice interventions, documentary research, and accessible arts production.)</p>
+<p>Pedagogy of the Spect-Actor: <a href="https://archive.org/details/TheTheatreOfTheOppressed-GetPolitical" target="_blank" rel="noopener noreferrer">The Theatre of the Oppressed (Augusto Boal / Internet Archive)</a> - Boal's manifesto and manual detailing Image Theatre, Invisible Theatre, and Forum Theatre as rehearsals for social transformation.</p>
+<p>Applied Performance Praxis and Ethics: <a href="https://archive.org/details/appliedtheatrere0000unse" target="_blank" rel="noopener noreferrer">The Applied Theatre Reader (Tim Prentki &amp; Sheila Preston, eds. / Internet Archive)</a> - An international collection of case studies, methodologies, and ethical considerations for theatre in prisons, healthcare, education, and conflict zones.</p>
+<p>Documentary and Community Staging: <a href="https://books.google.com/books?isbn=9780367726393" target="_blank" rel="noopener noreferrer">Verbatim Theatre Methodologies for Community-Engaged Practice (Cathyll Peters-Burton)</a> - A technical guide detailing interview protocols, transcription ethics, and choral editing required to transform recorded real-life testimony into stage drama.</p>
+<p>Inclusive Staging and Sensory Access: <a href="https://www.coursera.org/learn/accessibility-scenic-arts" target="_blank" rel="noopener noreferrer">Accessibility to the Scenic Arts (Universitat Autònoma de Barcelona / Coursera)</a> - An open course providing training on making theatrical performances accessible to diverse populations through audio description, surtitling, and venue accessibility management.</p>
+    </article>
+  </main>
+
+</body>
+</html>

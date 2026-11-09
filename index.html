@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+
+  <title>Hocbigg - Theatre and Drama Studies</title>
+  <meta name="description" content="Path to a free self-taught education in Theatre and Drama Studies.">
+  <meta name="author" content="hocbigg">
+
+  <link rel="canonical" href="https://hocbigg.github.io/theatre-and-drama-studies/">
+  <meta property="og:title" content="Hocbigg - Theatre and Drama Studies">
+  <meta property="og:description" content="Path to a free self-taught education in Theatre and Drama Studies.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hocbigg.github.io/theatre-and-drama-studies/">
+  <link rel="icon" href="https://hocbigg.github.io/images/favicon.ico">
+
+  <style>
+:root {
+  color-scheme: light dark;
+
+  --bg: #ffffff;
+  --fg: #1a1a1a;
+  --muted: #595959;
+  --border: #e0e0e0;
+  --th-bg: #f6f8fa;
+  --code-bg: #f4f4f4;
+  --link: #0969da;
+  --focus-ring: #0969da;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0d1117;
+    --fg: #e6edf3;
+    --muted: #8b949e;
+    --border: #30363d;
+    --th-bg: #161b22;
+    --code-bg: #161b22;
+    --link: #58a6ff;
+    --focus-ring: #58a6ff;
+  }
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 1.5rem auto;
+  max-width: 60rem;
+  padding: 0 1rem 3.5rem;
+  background-color: var(--bg);
+  color: var(--fg);
+  font: 1.15rem/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  
+  /* Cú pháp hiện đại thay thế cho word-wrap */
+  overflow-wrap: break-word;
+}
+
+.site-header {
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1rem;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 0.5rem 1.25rem;
+  font-size: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+nav a:hover, 
+nav a:focus-visible {
+  color: var(--fg);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+nav .nav-brand {
+  color: var(--fg);
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+
+.skip-link {
+  position: absolute;
+  transform: translateY(-150%);
+  left: 1rem;
+  background: var(--fg);
+  color: var(--bg);
+  padding: 0.5rem 1rem;
+  z-index: 100;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(1rem);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.3;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--fg);
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 2rem;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--border);
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1.15rem;
+}
+
+h6 {
+  font-size: 1rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+p, ul, ol, blockquote, table {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+li > ul,
+li > ol {
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+}
+
+li {
+  margin-bottom: 0.25rem;
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+a:has(img) {
+  text-decoration: none;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.page-header .page-subtitle {
+  color: var(--muted);
+  font-size: 1.15rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.page-header img {
+  margin: 0 auto 1rem;
+  display: block;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.875em;
+  background-color: var(--code-bg);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+pre {
+  background-color: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem;
+  overflow-x: auto;
+  tab-size: 2;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+  border: none;
+  font-size: 0.9rem;
+  border-radius: 0;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th, td {
+  border: 1px solid var(--border);
+  padding: 0.6rem 0.75rem;
+  vertical-align: top;
+}
+
+th {
+  background-color: var(--th-bg);
+  font-weight: 600;
+}
+
+blockquote {
+  margin-inline: 0;
+  border-left: 4px solid var(--border);
+  padding-left: 1rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  body {
+    max-width: none;
+    color: #000;
+    background: #fff;
+  }
+  .skip-link, nav {
+    display: none;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <nav aria-label="Main Navigation">
+    <ul>
+      <li><a href="https://hocbigg.github.io/" class="nav-brand">Hocbigg</a></li>
+      <li><a href="/theatre-and-drama-studies/">Theatre And Drama Studies</a></li>
+      <li><a href="/theatre-and-drama-studies/advanced_topics.html">Advanced Topics</a></li>
+      <li><a href="/theatre-and-drama-studies/projects.html">Projects</a></li>
+      <li><a href="https://github.com/hocbigg/theatre-and-drama-studies" target="_blank" rel="noopener noreferrer">GitHub<span class="sr-only"> (opens in new tab)</span></a></li>
+    </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <article>
+<header class="page-header">
+  <img src="/images/logo.png" alt="Hocbigg logo">
+  <h1>Hocbigg - Theatre and Drama Studies</h1>
+  <p class="page-subtitle">Path to a free self-taught education in Theatre and Drama Studies.</p>
+  <p class="last-updated"><small>Last updated on: <time datetime="2026-10-08">2026-10-08</time></small></p>
+</header>
+<h2 id="introduction">Introduction</h2>
+<p>Theatre is fundamentally an embodied, collaborative art form. Unlike literature intended solely for the page, a dramatic text is an incomplete blueprint designed to be realized in physical space through the collective work of actors, directors, designers, and an assembled audience. Studying theatre and drama studies means learning how dramatic literature, cultural history, spatial design, and psycho-physical performance intersect to create live meaning. </p>
+<p>This curriculum is built for independent, self-directed learners with no prior theatrical training or academic background in dramatic literature. Whether your goal is to analyze plays with greater dramaturgical depth, understand how productions move from concept to stage, or build a foundation for artistic practice, this sequence provides the essential literacy shared across conservatory and liberal arts disciplines.</p>
+<h3 id="how-to-navigate-the-curriculum">How to Navigate the Curriculum</h3>
+<p>Because theatrical practice is cumulative, the sequence of subjects matters:</p>
+<ul>
+<li><strong>Start with the foundational blueprint:</strong> Begin with <strong>Introduction to Theatre</strong> to establish common terminology and production workflows, followed immediately by <strong>Script Analysis</strong>. Script analysis is the core technical literacy of the theatre practitioner; it teaches you how to break down dramatic action, given circumstances, and character objectives. You will need this skill before you can direct, act, or design effectively.</li>
+<li><strong>Contextualize with history and literature:</strong> <strong>Theatre History</strong> and <strong>Dramatic Literature</strong> should be studied in close proximity. As you examine the historical evolution of staging spaces and performance traditions, read canonical plays alongside foundational theory like Aristotle's <em>Poetics</em> to see how texts reflect their original performance conditions.</li>
+<li><strong>Engage with applied crafts:</strong> <strong>Acting Fundamentals</strong> and <strong>Stagecraft and Design</strong> shift your focus to the practical mechanisms of performance and physical world-building—the actor's instrument on one hand, and the technical realities of lighting, scenery, and stage management on the other.</li>
+<li><strong>Synthesize in directing:</strong> Conclude with <strong>Directing Fundamentals</strong>, which draws all preceding subjects together into a cohesive artistic vision, testing your ability to lead actors and shape spatial storytelling.</li>
+</ul>
+<h3 id="scope">Scope</h3>
+<p>This page contains strictly the foundational core: the non-negotiable concepts, historical movements, and analytical tools that every student of theatre must understand. It does not attempt to cover specialized subfields such as playwriting, physical theatre lineages, or political performance.</p>
+<p>Once you have worked through this foundation, you can expand your studies across the rest of this curriculum:</p>
+<ul>
+<li>Move to <a href="advanced_topics.html">Advanced Topics</a> to explore specialized tracks such as playwriting, advanced acting methodologies, performance studies, or applied community theatre.</li>
+<li>Put your knowledge into practice with <a href="projects.html">Projects</a>, where you can apply your skills by directing a scene, drafting a ten-minute play, building a design model box, or compiling a dramaturgical casebook.</li>
+</ul>
+<h2 id="curriculum">Curriculum</h2>
+<h3 id="introduction-to-theatre">Introduction to Theatre</h3>
+<p>(A comprehensive overview of theatre as a collaborative art, exploring production workflows, creative and technical roles, and the foundational vocabulary of the stage.)</p>
+<p><a href="https://open.umn.edu/opentextbooks/textbooks/theatrical-worlds" target="_blank" rel="noopener noreferrer">Theatrical Worlds (Open Textbook Library / ed. Charlie Mitchell)</a> - A free, peer-reviewed open textbook written by professional theatre artists and educators that covers acting, directing, design, and production workflows from initial concept to performance.</p>
+<h3 id="script-analysis">Script Analysis</h3>
+<p>(Methods for analyzing dramatic scripts as blueprints for live theatrical performance rather than literature alone, focusing on given circumstances, dramatic action, and structural beats.)</p>
+<p><a href="https://ocw.mit.edu/courses/21m-710-script-analysis-fall-2011/" target="_blank" rel="noopener noreferrer">Script Analysis - 21M.710 (MIT OpenCourseWare)</a> - A structured university course providing syllabi, reading prompts, and analytical assignments that train you to uncover production choices embedded within dramatic texts.</p>
+<p><a href="https://books.google.com/books?isbn=9780809311101" target="_blank" rel="noopener noreferrer">Backwards and Forwards: A Technical Manual for Reading Plays (David Ball)</a> - Use this concise handbook alongside the MIT course assignments to master the practical mechanics of script analysis, including triggers, heaps, stasis, and intrusion.</p>
+<h3 id="theatre-history">Theatre History</h3>
+<p>(A chronological survey of theatrical traditions, architectural spaces, and staging conventions from antiquity to the modern era, encompassing both Western and global forms.)</p>
+<p><a href="https://www.youtube.com/playlist?list=PL8dPuuaLjXtONXALkeh5uisZqrAcPKCee" target="_blank" rel="noopener noreferrer">Crash Course Theater and Drama (Crash Course / Mike Rugnetta)</a> - A free 50-episode video lecture series tracing the global evolution of theatre from ritual and Greek tragedy through Sanskrit drama, Noh, and commedia dell'arte to modern musical theatre.</p>
+<p><a href="https://books.google.com/books?isbn=9780205511860" target="_blank" rel="noopener noreferrer">History of the Theatre (Oscar Brockett &amp; Franklin Hildy)</a> - Serves as the definitive reference textbook to consult in tandem with the video series whenever you need deep historical documentation, architectural reconstructions, and staging details for specific eras.</p>
+<h3 id="dramatic-literature">Dramatic Literature</h3>
+<p>(The critical reading and dramaturgical evaluation of canonical dramatic texts and foundational dramatic theory across major theatrical eras.)</p>
+<p><a href="https://ocw.mit.edu/courses/21l-005-introduction-to-drama-fall-2016/" target="_blank" rel="noopener noreferrer">Introduction to Drama - 21L.005 (MIT OpenCourseWare)</a> - Provides the primary pedagogical syllabus, structured reading schedule, and comparative essay assignments to guide your examination of dramatic literature across historical periods.</p>
+<p><a href="https://books.google.com/books?isbn=9780393283501" target="_blank" rel="noopener noreferrer">The Norton Anthology of Drama, Shorter Third Edition (W. W. Norton)</a> - The canonical one-volume reader providing full playtexts with extensive historical introductions, textual annotations, and critical perspectives to study alongside the MIT course.</p>
+<p><a href="https://www.gutenberg.org/ebooks/1974" target="_blank" rel="noopener noreferrer">Poetics (Aristotle / Project Gutenberg)</a> - The foundational primary work of Western dramatic theory; read this public-domain translation alongside classical Greek tragedies to analyze Aristotle's concepts of plot, reversal, recognition, and catharsis.</p>
+<h3 id="acting-fundamentals">Acting Fundamentals</h3>
+<p>(The actor's craft, focusing on given circumstances, intention, physical action, obstacle, and the fundamentals of psychological realism.)</p>
+<p><a href="https://www.futurelearn.com/courses/introduction-to-acting-principles-and-challenges" target="_blank" rel="noopener noreferrer">Introduction to Acting: Principles and Challenges (FutureLearn / Luleå University of Technology)</a> - A free introductory online course that walks through the actor's core challenges using physical exercises, scene analysis, and Meisner-based acting techniques.</p>
+<p><a href="https://archive.org/details/dli.ministry.08906" target="_blank" rel="noopener noreferrer">An Actor Prepares (Konstantin Stanislavski, trans. Elizabeth Reynolds Hapgood)</a> - Read this foundational text in psychological realism sequentially alongside the online course to understand how objectives, emotional memory, and inner life fuel physical performance.</p>
+<h3 id="stagecraft-and-design">Stagecraft and Design</h3>
+<p>(The visual and technical mechanics of theatrical production, including scenic construction, stage lighting, sound, costuming, and backstage safety.)</p>
+<p><a href="https://open.umn.edu/opentextbooks/textbooks/an-introduction-to-technical-theatre" target="_blank" rel="noopener noreferrer">An Introduction to Technical Theatre (Tal Sanders / Open Textbook Library)</a> - A practical, openly licensed technical manual detailing stage machinery, lighting instruments, scenic materials, shop safety, and stage management procedures.</p>
+<p><a href="https://ocw.mit.edu/courses/21m-603-principles-of-design-fall-2005/" target="_blank" rel="noopener noreferrer">Principles of Design - 21M.603 (MIT OpenCourseWare)</a> - Complements the technical manual by approaching the stage from the designer's conceptual standpoint, guiding you through script analysis, rendering, visual metaphors, and collaborative design presentations.</p>
+<h3 id="directing-fundamentals">Directing Fundamentals</h3>
+<p>(The director's role in synthesizing text, design, and performance, focusing on directorial vision, spatial composition, and rehearsal leadership.)</p>
+<p><a href="https://books.google.com/books?isbn=9780415404396" target="_blank" rel="noopener noreferrer">The Director's Craft: A Handbook for the Theatre (Katie Mitchell)</a> - A comprehensive, step-by-step practical manual that leads you through the entire directorial process, from preliminary text analysis and actor communication to table work and technical rehearsals.</p>
+<p><a href="https://books.google.com/books?isbn=9781843545262" target="_blank" rel="noopener noreferrer">Notes on Directing: 130 Lessons in Leadership from the Director's Chair (Frank Hauser &amp; Russell Reich)</a> - A concise companion of 130 practical maxims to read alongside Mitchell's text for direct guidance on staging mechanics, handling actors, and problem-solving in the rehearsal room.</p>
+    </article>
+  </main>
+
+</body>
+</html>
